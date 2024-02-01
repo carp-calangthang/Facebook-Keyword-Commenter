@@ -1,9 +1,9 @@
-# Facebook Spam (Free Version) 🎵
+# Facebook Spam 🎵
 This is a bot that spams comments based on keywords found in articles on Facebook. The bot is written in Python using Selenium.
 
 # Technologies Used 🚀
-Language: Python <br>
-Library: Selenium <br>
+- Language: Python <br>
+- Library: Selenium <br>
 
 # Features
 
@@ -11,9 +11,10 @@ Library: Selenium <br>
 - Automatically comment on posts
 - Comment with an image
 
+
 # Installation
 
-Install <a href="https://www.python.org/downloads/"> python 3.x.</a>. (Recommend python <a href="https://www.python.org/downloads/release/python-31013/"> 3.10.xx </a>)
+Install <a href="https://www.python.org/downloads/"> python </a> 3.x. Recommend python <a href="https://www.python.org/downloads/release/python-31013/"> 3.10.xx </a>
 <br>
 
 ### Clone the Repository
@@ -38,7 +39,23 @@ Install <a href="https://www.python.org/downloads/"> python 3.x.</a>. (Recommend
   Run start.cmd
 ```
     
-## Documentation
+# Documentation
 
-[Documentation](https://linktodocumentation)
+### 1. Configure the tool
+- Add Your Cookie to <b>cookies.txt</b> in <b>Data Folder</b>
+- Cookies should be in the following format:
+```bash
+  datr=63123ZPAMrVwPPSWSlqUj; sb=6UBwZZ31230XlKQrZlMcZ;c_user=100033620200981; xs=46%3ACTqqEFxq1Wen5g%3A2%3A1701855469%3A-1%3A6374; fr=05gqqiRxjQCTCYbVC.AWX44l5yBg0Cui_drY-Pkw1RduA.BlcEDp.dg.AAA.0.0.BlcEDx.AWXqjFYCVY4; wd=1280x842
+```
+### 2. Add your image
+- Add your image in to <b>imgaes folder</b>
 
+### 3. Add your comment content
+- Add your comment content to the <b>comment.txt</b> file
+
+### 4. Run the tool
+- Run start.cmd
+#### or
+```bash
+  python main.py
+```

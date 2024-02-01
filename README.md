@@ -14,7 +14,7 @@ This is a bot that spams comments based on keywords found in articles on Faceboo
 
 # Installation
 
-Install <a href="https://www.python.org/downloads/"> python </a> 3.x. Recommend python <a href="https://www.python.org/downloads/release/python-31013/"> 3.10.xx </a>
+Install <a href="https://www.python.org/downloads/"> python </a> (Recommend python <a href="https://www.python.org/downloads/release/python-31013/"> 3.10.xx </a>)
 <br>
 
 ### Clone the Repository

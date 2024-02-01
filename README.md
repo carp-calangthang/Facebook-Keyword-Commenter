@@ -13,7 +13,7 @@ Library: Selenium <br>
 
 # Installation
 
-Install <a href="https://www.python.org/downloads/"> python </a> 3.x. Recommend python <a href="https://www.python.org/downloads/release/python-31013/"> 3.10.xx </a>
+Install <a href="https://www.python.org/downloads/"> python 3.x.</a>. (Recommend python <a href="https://www.python.org/downloads/release/python-31013/"> 3.10.xx </a>)
 <br>
 
 ### Clone the Repository

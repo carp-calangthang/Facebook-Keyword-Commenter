@@ -59,3 +59,25 @@ Install <a href="https://www.python.org/downloads/"> python </a> (Recommend pyth
 ```bash
   python main.py
 ```
+# Authors
+
+- [@carp](https://github.com/carp-calangthang)
+
+## Contact
+- <a href="https://t.me/it_is_daijobu" target="blank"><img align="center" src="https://raw.githubusercontent.com/svg-image-stograge/svg-stograge/main/telegram.svg" alt="https://t.me/it_is_daijobu" height="30" width="40" /></a>
+- <a href="https://www.facebook.com/cacodelinhtinh/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="https://www.facebook.com/cacodelinhtinh/" height="30" width="40" /></a>
+- Email: nguyentrananhkhoa.wf@gmail.com
+
+# FAQ
+
+#### 1. What is the functionality of this tool?
+
+This tool is capable of automatically searching for posts based on your specified keywords and then automatically commenting on those posts with the predefined content you have set.
+
+#### 2. Can this tool add images when commenting?
+
+Yes, you can add images following the instructions provided above.
+
+#### 3. Does this tool support multi-threading?
+
+This tool can run in multi-process mode rather than multi-threaded, as I find it to be less prone to conflicts. Therefore, the tool supports multi-process execution instead of multi-threading.

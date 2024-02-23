@@ -15,7 +15,7 @@ from selenium.webdriver.support import expected_conditions as EC
 def login_and_find_posts(keyword, totalposts):
     
     print("---------------------------------------------------")
-    print("Đợi tìm các bài viết mới...")
+    print("Waiting for new posts to be found...")
     print("---------------------------------------------------")
         
     script_path = os.path.abspath(__file__) 
@@ -25,7 +25,7 @@ def login_and_find_posts(keyword, totalposts):
     cookies_path = os.path.abspath(cookies_file_path)
     
     options = webdriver.ChromeOptions()
-    #options.add_argument('--headless')
+    options.add_argument('--headless')
     options.add_argument("--disable-notifications");
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.get("https://www.facebook.com")
@@ -110,8 +110,7 @@ def login_and_find_posts(keyword, totalposts):
             print("Gâu gâu gâu gâu gâu 🐕!")
             
     print("---------------------------------------------------")
-    print("Đã chuyển đổi theo yêu cầu...")
-    print("Bắt đầu seeding...")
+    print("Start seeding...")
     print("---------------------------------------------------")
            
     time.sleep(5)

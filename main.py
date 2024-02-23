@@ -30,7 +30,7 @@ def run_login_function_with_cookie(cookie, browser_name, wait_time, wait_find_po
         print('----------------------------------------------------------------')
         open_browser_with_cookie(cookie, browser_name_with_c_user, wait_time, wait_find_post)
     else:
-        print(Fore.CYAN + f"{browser_name_with_c_user}" + Fore.GREEN + f"Không tìm thấy giá trị c_user trong cookie: {cookie}")
+        print(Fore.CYAN + f"{browser_name_with_c_user}" + Fore.GREEN + f"Can't get id of cookie!: {cookie}")
 
 if __name__ == "__main__":
 
@@ -41,11 +41,11 @@ if __name__ == "__main__":
     
     processes = []
     
-    wait_time = int(input("Nhập thời gian chờ sau mỗi lần comment xong (Giây): "))
-    wait_find_post = int(input("Nhập thời gian chờ để tìm bài viết mới (Giây): "))
+    wait_time = int(input("Enter the waiting time after each comment is posted (Second): "))
+    wait_find_post = int(input("Enter the waiting time to find new posts (Second): "))
     print('----------------------------------------------------------------')
-    keyword = input("Nhập từ khoá tìm bài viết: ")
-    totalposts = int(input("Nhập số lượng bài viết muốn tìm kiếm: "))
+    keyword = input("Enter the keyword to search for posts: ")
+    totalposts = int(input("Enter the number of posts you want to search for: "))
 
     while True:
         login_and_find_posts(keyword, totalposts)

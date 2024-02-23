@@ -28,7 +28,7 @@ def open_browser_with_cookie(cookies_value, proccess_name, wait_time, wait_find_
     image_files = [f for f in os.listdir(images_path) if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp'))]
     
     options = webdriver.ChromeOptions()
-    #options.add_argument('--headless')
+    options.add_argument('--headless')
     options.add_argument("--disable-notifications");
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.get('https://mbasic.facebook.com/')
@@ -84,8 +84,8 @@ def open_browser_with_cookie(cookies_value, proccess_name, wait_time, wait_find_
                 time.sleep(2)
                 
                 try:
-                    cookie_die = driver.find_element(By.XPATH, "//*[contains(text(), 'Trước tiên, bạn phải đăng nhập')]")
-                    print(Fore.CYAN + f"{proccess_name}:" + Fore.GREEN + "Tài khoản bị khoá!")
+                    cookie_die = driver.find_element(By.XPATH, "//*[contains(text(), 'You must log in first.')]")
+                    print(Fore.CYAN + f"{proccess_name}:" + Fore.GREEN + "The account has been locked!")
                     print('----------------------------------------------------------------')
                     break
                 except:
@@ -99,8 +99,8 @@ def open_browser_with_cookie(cookies_value, proccess_name, wait_time, wait_find_
                     pass
                 
                 try:
-                    comment_block = driver.find_element(By.XPATH, "//div[contains(text(), 'Để bảo vệ cộng đồng khỏi spam, chúng tôi giới hạn số lượng bình luận')]")
-                    print(Fore.CYAN + f"{proccess_name}:" + Fore.GREEN + " Bị chặn comment!")
+                    comment_block = driver.find_element(By.XPATH, "//div[contains(text(), 'To protect the community from spam, we limit the number of comments')]")
+                    print(Fore.CYAN + f"{proccess_name}:" + Fore.GREEN + " Commenting is blocked!")
                     print('----------------------------------------------------------------')
                     break
                 except:
@@ -111,7 +111,7 @@ def open_browser_with_cookie(cookies_value, proccess_name, wait_time, wait_find_
                     comment_box.click()
                     time.sleep(2)
                     if not image_files:
-                        print(Fore.CYAN + f"{proccess_name}:" + Fore.RED + "Không có ảnh trong folder!")
+                        print(Fore.CYAN + f"{proccess_name}:" + Fore.RED + "There are no images in the folder!")
                         comment_textarea = driver.find_element(By.NAME, 'comment_text')
                         comment_textarea.send_keys(comment_content)
                     else:
@@ -128,18 +128,18 @@ def open_browser_with_cookie(cookies_value, proccess_name, wait_time, wait_find_
                     
                 try:
                     comment_button = driver.find_element(By.XPATH, '//input[@value="Bình luận"]').click()
-                    print(Fore.CYAN + f"{proccess_name}:" + Fore.GREEN + f" Đã bình luận ở bài viết: {url}")
+                    print(Fore.CYAN + f"{proccess_name}:" + Fore.GREEN + f" Comment has been posted on the post: {url}")
                     print('----------------------------------------------------------------')
                     time.sleep(2)
                 except:
                     comment_button = driver.find_element(By.XPATH, '//input[@value="Comment"]').click()
-                    print(Fore.CYAN + f"{proccess_name}:" + Fore.GREEN + f" Đã bình luận ở bài viết: {url}")
+                    print(Fore.CYAN + f"{proccess_name}:" + Fore.GREEN + f" Comment has been posted on the post: {url}")
                     print('----------------------------------------------')
                     time.sleep(2)
                                         
                 try:
-                    block_account = driver.find_element(By.XPATH, "//h2[text()='bạn đã bị chặn']")
-                    print(Fore.CYAN + f"{proccess_name}:" + Fore.GREEN + " Bị chặn comment!")
+                    block_account = driver.find_element(By.XPATH, "//h2[text()='You have been blocked']")
+                    print(Fore.CYAN + f"{proccess_name}:" + Fore.GREEN + " Commenting is blocked!")
                     print('----------------------------------------------------------------')
                     break
                 except:
@@ -154,10 +154,10 @@ def open_browser_with_cookie(cookies_value, proccess_name, wait_time, wait_find_
         url_file.seek(0)
         url_file.truncate()
     
-    print(Fore.CYAN + f"{proccess_name}:" + Fore.GREEN + " Đóng chương trình!")
+    print(Fore.CYAN + f"{proccess_name}:" + Fore.GREEN + " Close the program!")
     print('-----------------------------------------------------------------')
 
     driver.quit()
     
-    print(Fore.CYAN + f"{proccess_name}:" + Fore.GREEN + f" Chờ {wait_find_post} giây để tìm các bài viết mới...")
+    print(Fore.CYAN + f"{proccess_name}:" + Fore.GREEN + f" Wait for {wait_find_post} seconds to find new posts....")
     time.sleep(wait_find_post)

@@ -11,6 +11,9 @@ This is a bot that spams comments based on keywords found in articles on Faceboo
 - Automatically comment on posts
 - Comment with an image
 
+# Download
+- Download ENG Version: <a href="https://github.com/carp-calangthang/Facebook-Keyword-Commenter/archive/refs/heads/main.zip"> Facebook Keyword Commenter </a>
+- Donwload Vie Version: <a href="https://github.com/carp-calangthang/Facebook-Keyword-Commenter/archive/refs/heads/vi-version.zip"> Facebook Keyword Commenter (Vie Version) </a>
 
 # Installation
 
